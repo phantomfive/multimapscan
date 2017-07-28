@@ -25,7 +25,7 @@ func probePort(ip string) {
 	cmd :=exec.Command("nmap", "-Pn", "-T5",  ip)
 	out, e := cmd.Output()
 	if e==nil {
-		fmt.Fprintf(os.Stderr, "mapped IP: ", ip)
+		fmt.Fprintf(os.Stderr, "mapped IP: %s", ip)
 		output(string(out))
 	}else {
 		fmt.Fprintf(os.Stderr, "err: %s    %s", out, e)
