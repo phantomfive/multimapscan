@@ -1,5 +1,5 @@
-scanner: main.go
+multimapscan: main.go
 	go build
 
-run: scanner
-	time ./scanner
+run: multimapscan
+	time ./multimapscan
